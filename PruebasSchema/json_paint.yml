@@ -1,0 +1,31 @@
+info:
+  name: json_paint
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:3000/validate-paint
+  body:
+    type: json
+    data: |-
+      {
+        "name": "name",
+        "artist": "artist",
+        "dimension": {
+          "width": 10,
+          "height": 10
+        },
+        "description": "description",
+        "tags": [
+          "oil",
+          "digital"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

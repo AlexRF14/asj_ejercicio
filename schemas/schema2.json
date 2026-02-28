@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "http://example.com/schemas/sp_squad.schema.json",
+  "type": "object",
+  "title": "Super heroes",
+  "description": "Super heroes information",
+  "required": [
+    "squadName",
+    "homeTown",
+    "formed",
+    "secretBase",
+    "active",
+    "members"
+  ],
+  "properties": {
+    "squadName": {
+      "type": "string",
+      "description": "the name of the squad"
+    },
+    "homeTown": {
+      "type": "string",
+      "description": "the name of the home town"
+    },
+    "formed": {
+      "type": "integer",
+      "description": "the dated when the squad was formed"
+    },
+    "secretBase": {
+      "type": "string",
+      "description": "name of the secret base"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "if the squad is or nor active"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "required": [
+          "name",
+          "age",
+          "secretIdentity",
+          "powers"
+        ],
+        "name": {
+          "type": "string",
+          "description": "superheroe name"
+        },
+        "age": {
+          "type": "integer",
+          "description": "superheroe age"
+        },
+        "secretIdentity": {
+          "type": "string",
+          "description": "the secret identity of the superheroe"
+        },
+        "powers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "the diferent powers a superheroe has"
+        }
+      }
+    }
+  }
+}

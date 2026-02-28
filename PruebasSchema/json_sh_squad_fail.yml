@@ -1,0 +1,59 @@
+info:
+  name: json_sh_squad_fail
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:3000/validate-sh-squads
+  body:
+    type: json
+    data: |-
+      {
+        "squadName": "Super hero squad",
+        "homeTown": "Metro City",
+        "formed": 2016,
+        "secretBase": 2,
+        "active": true,
+        "members": [
+          {
+            "name": "Molecule Man",
+            "age": 29,
+            "secretIdentity": "Dan Jukes",
+            "powers": [
+              "Radiation resistance",
+              "Turning tiny",
+              "Radiation blast"
+            ]
+          },
+          {
+            "name": "Madame Uppercut",
+            "age": 39,
+            "secretIdentity": "Jane Wilson",
+            "powers": [
+              "Million tonne punch",
+              "Damage resistance",
+              "Superhuman reflexes"
+            ]
+          },
+          {
+            "name": "Eternal Flame",
+            "age": 1000000,
+            "secretIdentity": "Unknown",
+            "powers": [
+              "Immortality",
+              "Heat Immunity",
+              "Inferno",
+              "Teleportation",
+              "Interdimensional travel"
+            ]
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
